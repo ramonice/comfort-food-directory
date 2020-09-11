@@ -3,12 +3,19 @@
   --dalandan: #d69a18;
   --green: #67bd62;
   --dark-white: #dfd9d9;
+  --lato: 'Lato', sans-serif;
+  --merienda: 'Merienda', cursive;
 }
 
 /* #region general */
+.lato { font-family: 'Lato', sans-serif; }
+.merienda { font-family: 'Merienda', cursive; }
+
 .fs-12 { font-size: 12px; }
 .fs-14 { font-size: 14px; }
 .fs-26 { font-size: 26px; }
+
+.lh-30 { line-height: 30px; }
 
 .fw-700 { font-weight: 700; }
 /* #endregion general */
@@ -33,7 +40,7 @@
 .site-intro {
   height: 250px;
   width: 420px;
-  background-color: rgba(80, 74, 75, 0.2);
+  background-color: rgba(80, 74, 75, 0.4);
   margin-left: 100px;
   border-left: solid 4px var(--green);
   border-radius: 3px;
