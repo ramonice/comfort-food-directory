@@ -27,7 +27,7 @@ function searchMeal(e) {
           resultHeading.innerHTML =  `<h4>Nothing found for <em>"${term}"<em>.</h4>`
         } else {
           meals.innerHTML = data.meals.map(meal => `
-            <div class="meal">
+            <div class="meal" draggable="true">
               <img src="${meal.strMealThumb}" alt="${meal.strMeal}" />
               <div class="meal-info" data-mealID="${meal.idMeal}">
                 <h4>${meal.strMeal}</h4>
@@ -109,44 +109,5 @@ mealsEl.addEventListener('click', e => {
 //#endregion Search
 
 
-//#region Drag and Drop
-const fill = document.querySelector('.fill');
-const empties = document.querySelectorAll('.empty');
 
-// fill listeners
-fill.addEventListener('dragstart', dragStart);
-fill.addEventListener('dragend', dragEnd);
-
-// loop through empties and call drag events
-for(const empty of empties) {
-  empty.addEventListener('dragover', dragOver);
-  empty.addEventListener('dragenter', dragEnter);
-  empty.addEventListener('dragleave', dragLeave);
-  empty.addEventListener('drop', dragDrop);
-}
-
-// drag functions
-function dragStart() {
-  this.className += ' hold';
-  setTimeout(() => (this.className = ' invisible'), 0);
-}
-function dragEnd() {
-  this.className = 'fill';
-}
-
-function dragOver(e) {
-  e.preventDefault();
-}
-function dragEnter(e) {
-  e.preventDefault();
-  this.className += ' hovered';
-}
-function dragLeave() {
-  this.className = 'empty';
-}
-function dragDrop() {
-  this.className = 'empty';
-  this.append(fill);
-}
-//#endregion Drag and Drop
 
