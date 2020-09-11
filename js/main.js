@@ -35,7 +35,7 @@ function searchMeal(e) {
           `
         } else {
           meals.innerHTML = data.meals.map(meal => `
-            <div class="meal mx-1 my-1">
+            <div class="meal mx-1 my-1" data-toggle="modal" data-target="#mealInfo">
               <img src="${meal.strMealThumb}" alt="${meal.strMeal}" />
               <div class="meal-info" data-mealID="${meal.idMeal}">
                 <h4>${meal.strMeal}</h4>
@@ -80,18 +80,29 @@ function addMealToDOM(meal) {
 
   single_mealEl.innerHTML = `
     <div class="single-meal">
-      <h1>${meal.strMeal}</h1>
-      <img src="${meal.strMealThumb}" alt="${meal.strMeal}" />
-      <div class="single-meal-info">
-        ${meal.strCategory ? `<p>${meal.strCategory}</p>` : ''}
-        ${meal.strArea ? `<p>${meal.strArea}</p>` : ''}
+
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel"><h4>${meal.strMeal}</h4></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
       </div>
-      <div class="main">
-        <p>${meal.strInstructions}</p>
-        <h2>Ingredients</h2>
-        <ul>
-          ${ingredients.map(ing => `<li>${ing}</li>`).join('')}
-        </ul>
+      <div class="modal-body">
+      
+
+      
+        <img class="img-fluid" src="${meal.strMealThumb}" alt="${meal.strMeal}" />
+        <div class="single-meal-info">
+          ${meal.strCategory ? `<p>${meal.strCategory}</p>` : ''}
+          ${meal.strArea ? `<p>${meal.strArea}</p>` : ''}
+        </div>
+        <div class="main">
+          <p>${meal.strInstructions}</p>
+          <h2>Ingredients</h2>
+          <ul>
+            ${ingredients.map(ing => `<li>${ing}</li>`).join('')}
+          </ul>
+        </div>
       </div>
     </div>
   `;
