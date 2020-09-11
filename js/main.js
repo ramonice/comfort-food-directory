@@ -22,20 +22,20 @@ function searchMeal(e) {
       .then(data => {
         console.log(data);
         resultHeading.innerHTML = `
-          <div class="alert alert-info" role="alert">
+          <div class="alert alert-info mt-4" role="alert">
             Search result for keyword: <em class="fw-700">${term}</em>.
           </div>
         `;
 
         if(data.meals === null) {
           resultHeading.innerHTML =  `
-            <div class="alert alert-warning" role="alert">
+            <div class="alert alert-warning mt-4" role="alert">
               Nothing found for keyword: <em class="fw-700">${term}</em>.
             </div>
           `
         } else {
           meals.innerHTML = data.meals.map(meal => `
-            <div class="meal">
+            <div class="meal mx-1 my-1">
               <img src="${meal.strMealThumb}" alt="${meal.strMeal}" />
               <div class="meal-info" data-mealID="${meal.idMeal}">
                 <h4>${meal.strMeal}</h4>
