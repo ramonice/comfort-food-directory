@@ -1,6 +1,42 @@
+:root {
+  /* colors */
+  --dalandan: #d69a18;
+  --green: #67bd62;
+  --dark-white: #dfd9d9;
+}
+
+/* #region general */
+.fs-12 { font-size: 12px; }
+.fs-14 { font-size: 14px; }
+.fs-26 { font-size: 26px; }
+
+.fw-700 { font-weight: 700; }
+/* #endregion general */
+
+/* #region navbars */
+.top-most-nav { background-color: var(--dark-white); }
+.top-most-nav i { color: var(--dalandan); }
+.nav-wrapper { position: sticky; top: 0px; z-index: 9999; }
+.navbar-brand { margin-right: 0 !important; }
+.navbar { padding: 0 !important; }
+/* #endregion navbars */
+
 /* #region hero */
 .hero {
-  background-image: ;
+  height: 450px;
+  background-image: url('../img/hero-halox2.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.site-intro {
+  height: 250px;
+  width: 420px;
+  background-color: rgba(80, 74, 75, 0.2);
+  margin-left: 100px;
+  border-left: solid 4px var(--green);
+  border-radius: 3px;
 }
 /* #endregion hero */
 

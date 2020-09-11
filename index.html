@@ -8,25 +8,70 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
 
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="img/favicon.png" />
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Merienda:wght@700&display=swap" rel="stylesheet">
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
-    <title>Comfort Food Directory</title>
+    <title>Comfort Food Directory | Food is the best comforter!</title>
   </head>
   <body>
+    <div class="nav-wrapper">
+      <div class="container-fluid top-most-nav fs-12 fw-700">
+        <div class="container-xl mx-auto">
+            <nav class="navbar navbar-expand-sm navbar-light">
+              <button class="navbar-toggler mx-auto" type="button" data-toggle="collapse" data-target="#navbarNav">
+                  <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                  <li class="nav-item inline-block">
+                    <a class="nav-link" href="https://www.themealdb.com/"><i class="fas fa-cheese"></i> TheMealDB API</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="fas fa-video"></i> Video Demo</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="https://fb.com/ramonito.omandam"><i class="fab fa-facebook"></i> Facebook</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="fab fa-linkedin"></i> Linkedin</a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+        </div>
+      </div>
+
+      <div class="container-fluid bg-light">
+        <div class="container-xl mx-auto">
+          <nav class="navbar navbar-light bg-light d-flex justify-content-center justify-content-md-between">
+            <a class="navbar-brand"><img src="img/logo.jpg" class="img-fluid" alt="comfort-food-directory"></a>
+            <form action="" class="form-inline" id="submit">
+              <input class="form-control mr-0 mr-sm-2" type="text" id="search" placeholder="Favorite confort food?" aria-label="Search">
+              <button class="btn my-2 my-sm-0 mx-auto mx-sm-0" type="submit"><i class="fas fa-search text-success"></i></button>
+            </form>
+          </nav>
+          
+        </div>
+      </div>
+    </div>
     
-    <div class="container-xl mx-auto" style="background-color: pink">
+    <div class="container-xl mx-auto">  
 
-      <nav class="navbar navbar-light bg-light">
-        <a class="navbar-brand">Food Directory</a>
-        <form action="" class="form-inline" id="submit">
-          <input class="form-control mr-sm-2" type="text" id="search" placeholder="Favorite confort food?" aria-label="Search">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
-      </nav>
-
-      <div class="row hero">
-        
+      <div class="row hero d-flex align-items-center text-light">
+        <div class="site-intro px-4 pt-5">
+          <h1 class="fs-26">Comfort Food Directory</h1>
+          <p>Comfort food is the food that makes us feel good – satisfied, calm, cared for and carefree. 
+            It’s food that fills us up emotionally and physically. Finding comfort in food is a basic human experience.</p>
+        </div>
       </div><!-- hero -->
 
       <div class="row"> 
