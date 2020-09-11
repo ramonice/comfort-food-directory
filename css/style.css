@@ -1,10 +1,10 @@
-/* region Search Meal */
-.meals {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 20px;
-  margin-top: 20px;
+/* #region hero */
+.hero {
+  background-image: ;
 }
+/* #endregion hero */
+
+/* region Search Meal */
 .meal {
   cursor: pointer;
   position: relative;
@@ -39,4 +39,3 @@
   opacity: 1;
 }
 /* endregion Search Meal */
-

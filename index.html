@@ -11,27 +11,32 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
-    <title>Diet Manager</title>
+    <title>Comfort Food Directory</title>
   </head>
   <body>
     
-    <div class="container-xl mx-auto">
-      
+    <div class="container-xl mx-auto" style="background-color: pink">
 
-      <div class="row">
-
-        <form action="" class="flex" id="submit">
-          <input type="text" id="search" placeholder="Enter keywords">
-          <button class="search-btn" type="submit">
-            search
-          </button>
+      <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand">Food Directory</a>
+        <form action="" class="form-inline" id="submit">
+          <input class="form-control mr-sm-2" type="text" id="search" placeholder="Favorite confort food?" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
         </form>
+      </nav>
+
+      <div class="row hero">
+        
+      </div><!-- hero -->
+
+      <div class="row"> 
 
         <div id="result-heading"></div>
-        <div id="meals" class="meals"></div>
+        <div id="meals" class="meals list"></div>
         <div id="single-meal"></div>
 
       </div><!-- row -->
+
     </div><!-- container-xl mx-auto -->
 
     <!-- Custom JS -->

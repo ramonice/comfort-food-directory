@@ -27,10 +27,12 @@ function searchMeal(e) {
           resultHeading.innerHTML =  `<h4>Nothing found for <em>"${term}"<em>.</h4>`
         } else {
           meals.innerHTML = data.meals.map(meal => `
-            <div class="meal" draggable="true">
-              <img src="${meal.strMealThumb}" alt="${meal.strMeal}" />
-              <div class="meal-info" data-mealID="${meal.idMeal}">
-                <h4>${meal.strMeal}</h4>
+            <div class="list-item" draggable="true">
+              <div class="meal">
+                <img src="${meal.strMealThumb}" alt="${meal.strMeal}" />
+                <div class="meal-info" data-mealID="${meal.idMeal}">
+                  <h4>${meal.strMeal}</h4>
+                </div>
               </div>
             </div>
           `)
@@ -107,7 +109,4 @@ mealsEl.addEventListener('click', e => {
 
 });
 //#endregion Search
-
-
-
 
