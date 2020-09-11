@@ -11,6 +11,8 @@
 .lato { font-family: 'Lato', sans-serif; }
 .merienda { font-family: 'Merienda', cursive; }
 
+.bg-dark-white { background-color: var(--dark-white); }
+
 .fs-12 { font-size: 12px; }
 .fs-14 { font-size: 14px; }
 .fs-26 { font-size: 26px; }
@@ -18,6 +20,8 @@
 .lh-30 { line-height: 30px; }
 
 .fw-700 { font-weight: 700; }
+
+.container-fluid { padding-left: 0 !important; padding-right: 0 !important; }
 /* #endregion general */
 
 /* #region navbars */

@@ -21,18 +21,24 @@ function searchMeal(e) {
       .then(res => res.json())
       .then(data => {
         console.log(data);
-        resultHeading.innerHTML = `<h4>Results for <em>"${term}"<em></h4>`;
+        resultHeading.innerHTML = `
+          <div class="alert alert-info" role="alert">
+            Search result for keyword: <em class="fw-700">${term}</em>.
+          </div>
+        `;
 
         if(data.meals === null) {
-          resultHeading.innerHTML =  `<h4>Nothing found for <em>"${term}"<em>.</h4>`
+          resultHeading.innerHTML =  `
+            <div class="alert alert-warning" role="alert">
+              Nothing found for keyword: <em class="fw-700">${term}</em>.
+            </div>
+          `
         } else {
           meals.innerHTML = data.meals.map(meal => `
-            <div class="list-item" draggable="true">
-              <div class="meal">
-                <img src="${meal.strMealThumb}" alt="${meal.strMeal}" />
-                <div class="meal-info" data-mealID="${meal.idMeal}">
-                  <h4>${meal.strMeal}</h4>
-                </div>
+            <div class="meal">
+              <img src="${meal.strMealThumb}" alt="${meal.strMeal}" />
+              <div class="meal-info" data-mealID="${meal.idMeal}">
+                <h4>${meal.strMeal}</h4>
               </div>
             </div>
           `)
