@@ -76,33 +76,30 @@ function addMealToDOM(meal) {
     }
   }
 
-  console.log("ing = " + ingredients);
-
   single_mealEl.innerHTML = `
     <div class="single-meal">
 
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel"><h4>${meal.strMeal}</h4></h5>
+        <h5 class="modal-title" id="exampleModalLabel"><h4 class="merienda">${meal.strMeal}</h4></h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <div class="modal-body">
-      
+      <div class="modal-body lato pb-5">
 
-      
         <img class="img-fluid" src="${meal.strMealThumb}" alt="${meal.strMeal}" />
         <div class="single-meal-info">
-          ${meal.strCategory ? `<p>${meal.strCategory}</p>` : ''}
-          ${meal.strArea ? `<p>${meal.strArea}</p>` : ''}
+          ${meal.strCategory ? `<p class="mt-3 fw-700">Category: ${meal.strCategory}</p>` : ''}
+          ${meal.strArea ? `<p class="fw-700">Origin: ${meal.strArea}</p>` : ''}
         </div>
-        <div class="main">
+        <div class="main mb-5">
           <p>${meal.strInstructions}</p>
-          <h2>Ingredients</h2>
+          <h5 class="merienda">Ingredients:</h5>
           <ul>
             ${ingredients.map(ing => `<li>${ing}</li>`).join('')}
           </ul>
         </div>
+
       </div>
     </div>
   `;

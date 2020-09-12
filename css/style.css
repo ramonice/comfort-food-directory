@@ -88,3 +88,22 @@
   opacity: 1;
 }
 /* endregion Search Meal */
+
+/* #region media queries */
+@media (max-width: 624px) {
+  .site-intro {
+    width: 100%;
+    max-height: 400px;
+    margin: 10px;
+    text-align: center;
+    background-color: rgba(80, 74, 75, 0.6);
+    padding-top: 0 !important;
+  }
+  .site-intro p {
+    line-height: 25px;
+  }
+  .modal {
+    margin-top: 280px;
+  }
+}
+/* #endregion media queries */
